@@ -1,7 +1,6 @@
 // Google Analytics 4: page views plus a "link_click" event for every link or reel a visitor taps.
-// Paste your Measurement ID below (Google Analytics → Admin → Data streams → your site → "G-…").
-// Until then nothing is loaded and nothing is tracked.
-const GA_ID = "G-XXXXXXXXXX";
+// Measurement ID of the "masalatomatcha" web stream (Google Analytics → Admin → Data streams).
+const GA_ID = "G-MKYHFS3KX3";
 
 if (/^G-[A-Z0-9]{6,}$/.test(GA_ID) && GA_ID !== "G-XXXXXXXXXX") {
   const s = document.createElement("script");
