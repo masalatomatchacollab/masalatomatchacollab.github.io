@@ -1,0 +1,59 @@
+# Daily health check at 12 AM Japan time (15:00 UTC): a security scan of the site's JavaScript,
+# and a check of every link on the pages. Broken links are listed in one issue for you to fix.
+# GitHub may start scheduled runs a few minutes late. "Run workflow" on the Actions tab runs it now.
+name: Daily check
+
+on:
+  schedule:
+    - cron: "0 15 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  security-scan:
+    name: Security scan (CodeQL)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: github/codeql-action/init@v3
+        with:
+          languages: javascript
+      - uses: github/codeql-action/analyze@v3
+
+  links:
+    name: Broken links
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check links
+        id: lychee
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Some sites (Instagram, LinkedIn, Indeed...) answer robots with 403 or 429 although the page works.
+          args: >-
+            --no-progress --max-retries 2 --timeout 30
+            --accept 200..=299,403,429
+            --exclude-path .github
+            './**/*.html'
+          fail: false
+          output: ./lychee/report.md
+      - name: Open or update the broken-links issue
+        if: steps.lychee.outputs.exit_code != 0
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          title="Broken links on the site"
+          num=$(gh issue list --state open --search "in:title \"$title\"" --json number --jq '.[0].number')
+          if [ -n "$num" ]; then
+            gh issue edit "$num" --body-file ./lychee/report.md
+          else
+            gh issue create --title "$title" --body-file ./lychee/report.md
+          fi

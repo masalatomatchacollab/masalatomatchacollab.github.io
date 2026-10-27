@@ -36,3 +36,11 @@ you paste your Measurement ID into `GA_ID` at the top of `analytics.js`.
    each of `link_name`, `link_type` and `link_section`.
 5. See taps live in **Reports → Realtime**; later in **Reports → Engagement → Events → link_click**, or an
    **Explore** table with `link_name` as the row.
+
+## Daily checks (12 AM Japan time)
+- **Dependabot** (`.github/dependabot.yml`) opens a pull request when a GitHub Action used here has a new version.
+  The site has no other packages. Review and merge it on GitHub.
+- **Daily check** (`.github/workflows/daily-check.yml`): a CodeQL security scan of the JavaScript (results in the
+  Security tab) and a check of every link; broken links are listed in one issue, "Broken links on the site".
+  Run it any time from Actions → Daily check → Run workflow.
+- Dependabot security alerts and security updates are on in the repository settings.
