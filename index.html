@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>MasalaToMatcha · Links</title>
+<meta name="description" content="Indian engineer and ninja mom in Japan. Japan job starter list, my broadcast channel and my reels.">
+<meta property="og:title" content="MasalaToMatcha">
+<meta property="og:description" content="Japan job starter list · broadcast channel · my reels">
+<meta property="og:image" content="avatar.jpg">
+<link rel="icon" href="avatar.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&family=Young+Serif&display=swap">
+<script>try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch {}</script>
+<link rel="stylesheet" href="style.css">
+<script src="analytics.js" defer></script>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <img class="avatar" src="avatar.jpg" alt="MasalaToMatcha" width="112" height="112">
+    <h1>MasalaToMatcha</h1>
+    <a class="handle" href="https://www.instagram.com/masalatomatcha/">@masalatomatcha</a>
+    <p class="tagline">🇮🇳|🇯🇵 Engineer 👩‍💻 · ninja mom 🥷 · Japan life with Indian roots</p>
+    <p class="welcome">Namaste &amp; konnichiwa! 🙏 Welcome to my little corner. Whether you're dreaming of a job in
+      Japan or just curious about life here, I hope something on this page makes your journey a bit easier.</p>
+    <div class="actions">
+      <a class="btn primary" href="https://www.instagram.com/masalatomatcha/">Follow on Instagram</a>
+    </div>
+  </header>
+
+  <nav class="links" aria-label="Links">
+    <a class="link feature" href="jobs.html">
+      <span class="ico" aria-hidden="true">🇯🇵</span>
+      <span><b>Japan job starter list</b><span>Recruiting agencies, job portals and job fairs from my reels</span></span>
+      <span class="go" aria-hidden="true">›</span>
+    </a>
+    <a class="link" id="channel-link" href="https://www.instagram.com/channel/Rrvq-1swxfAt-TYS/">
+      <span class="ico" aria-hidden="true">📢</span>
+      <span><b>Join my broadcast channel</b><span>Little moments from our life in Japan, and new reels before anyone else</span></span>
+      <span class="go" aria-hidden="true">›</span>
+    </a>
+  </nav>
+
+  <section class="card series" aria-labelledby="series-title">
+    <h2 id="series-title">How I got a job in Japan 🎬</h2>
+    <div class="reels poster">
+      <a class="reel" href="https://www.instagram.com/reel/DeWdQTxzWyj/">
+        <span class="thumb"><img src="reels/DeWdQTxzWyj.jpg" alt="" loading="lazy" width="72" height="128"><span class="play"></span></span>
+        <span class="meta"><b>Part 1: a job in less than 2 months, and I paid nothing</b><span class="views">13K+ views</span><span class="watch">▶ Watch reel</span></span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeY-a5KzJt8/">
+        <span class="thumb"><img src="reels/DeY-a5KzJt8.jpg" alt="" loading="lazy" width="72" height="128"><span class="play"></span></span>
+        <span class="meta"><b>Part 2: how my first interview went</b><span class="views">3K+ views</span><span class="watch">▶ Watch reel</span></span>
+      </a>
+      <a class="reel" href="https://www.instagram.com/reel/DeblXfXzBxU/">
+        <span class="thumb"><img src="reels/DeblXfXzBxU.jpg" alt="" loading="lazy" width="72" height="128"><span class="play"></span></span>
+        <span class="meta"><b>Part 3: did I need Japanese?</b><span class="views">24K+ views</span><span class="watch">▶ Watch reel</span></span>
+      </a>
+    </div>
+    <a class="more-reels" href="https://www.instagram.com/masalatomatcha/reels/">See more reels on my Instagram ›</a>
+  </section>
+
+</main>
+<button class="theme" type="button" id="theme" aria-label="Switch to dark mode">🌙</button>
+<script>
+  // Light by default; the button switches to dark and back, remembered on this device.
+  const themeBtn = document.getElementById("theme");
+  const showTheme = () => { const dark = document.documentElement.dataset.theme === "dark";
+    themeBtn.textContent = dark ? "☀️" : "🌙"; themeBtn.setAttribute("aria-label", dark ? "Switch to light mode" : "Switch to dark mode"); };
+  themeBtn.addEventListener("click", () => {
+    const dark = document.documentElement.dataset.theme !== "dark";
+    if (dark) document.documentElement.dataset.theme = "dark"; else delete document.documentElement.dataset.theme;
+    try { localStorage.setItem("theme", dark ? "dark" : "light"); } catch {}
+    showTheme();
+  });
+  showTheme();
+</script>
+</body>
+</html>
