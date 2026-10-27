@@ -143,9 +143,3 @@ footer { text-align: center; font-size: 13px; color: var(--muted); }
   border: 1px solid var(--sage); color: var(--sage-deep); background: var(--card); font-weight: 700; font-size: 14px; text-decoration: none; }
 .more-reels:hover { background: var(--sage-soft); }
 .series { justify-items: stretch; }
-
-/* banner shown only inside Instagram's in-app browser */
-.inapp { display: grid; justify-items: center; gap: 6px; text-align: center; padding: 12px 64px; background: var(--sage-soft);
-  color: var(--ink); border-bottom: 1px solid var(--line); font-size: 14px; font-weight: 600; }
-.inapp-btn { background: var(--sage-deep); color: var(--paper); border-radius: 999px; padding: 8px 18px; text-decoration: none; font-weight: 700; }
-.inapp small { color: var(--muted); font-weight: 400; font-size: 12.5px; }
