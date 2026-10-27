@@ -1,9 +1,14 @@
 # MasalaToMatcha links
 
-The link-in-bio site for @masalatomatcha: `index.html` (links and Follow) and `jobs.html` (free Japan job
+The link-in-bio site for @masalatomatcha, live at **https://masalatomatchacollab.github.io**
+(repo `masalatomatchacollab/masalatomatchacollab.github.io`, GitHub Pages from `main`): `index.html` (links and Follow) and `jobs.html` (free Japan job
 starter list). Plain HTML and CSS, no build step. `avatar.jpg` is the profile photo.
 
-## Publish on GitHub Pages
+## Publish changes
+Commit and push to `main`; GitHub Pages updates in a minute or two. This Mac's GitHub CLI has several accounts, so
+switch first: `gh auth switch --user masalatomatchacollab`, push, then switch back (`--user myreact67`).
+
+## How it was set up on GitHub Pages
 1. Create a public repository on GitHub. If you name it `<your-username>.github.io`, the site lives at
    `https://<your-username>.github.io/`; any other name gives `https://<your-username>.github.io/<repo>/`.
 2. Upload these files to the repository (Add file → Upload files, or `git push`).
