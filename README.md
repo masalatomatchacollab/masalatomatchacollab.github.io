@@ -2,7 +2,8 @@
 
 The link-in-bio site for @masalatomatcha, live at **https://masalatomatchacollab.github.io**
 (repo `masalatomatchacollab/masalatomatchacollab.github.io`, GitHub Pages from `main`): `index.html` (links, Follow and the free CV templates in `templates/`) and `jobs.html` (free Japan job
-starter list). Plain HTML and CSS, no build step. `avatar.jpg` is the profile photo.
+starter list) and `studybooks.html` (her N5–N2 Japanese book list: links to official publisher pages and free,
+openly licensed material only; never host copies of paid textbooks). Plain HTML and CSS, no build step. `avatar.jpg` is the profile photo.
 
 ## Publish changes
 Commit and push to `main`; GitHub Pages updates in a minute or two. This Mac's GitHub CLI has several accounts, so

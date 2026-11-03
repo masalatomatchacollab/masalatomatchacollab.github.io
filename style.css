@@ -143,3 +143,20 @@ footer { text-align: center; font-size: 13px; color: var(--muted); }
   border: 1px solid var(--sage); color: var(--sage-deep); background: var(--card); font-weight: 700; font-size: 14px; text-decoration: none; }
 .more-reels:hover { background: var(--sage-soft); }
 .series { justify-items: stretch; }
+
+/* study books: one tap-to-open card per level, styled like the link buttons */
+.levels { display: grid; gap: 12px; }
+.level { background: var(--card); border: 1px solid var(--line); border-radius: 18px; box-shadow: var(--shadow); overflow: hidden; }
+.level[open] { border-color: var(--sage); }
+.level summary { list-style: none; display: grid; grid-template-columns: 44px 1fr auto; align-items: center; gap: 12px;
+  padding: 14px 16px; cursor: pointer; }
+.level summary::-webkit-details-marker { display: none; }
+.level summary .ico { width: 44px; height: 44px; border-radius: 12px; display: grid; place-items: center; font-size: 22px; background: var(--sage-soft); }
+.level summary b { display: block; font-size: 16px; }
+.level summary span span { display: block; font-size: 13.5px; color: var(--muted); }
+.level summary .go { color: var(--muted); font-size: 18px; transition: transform .2s ease; }
+.level[open] summary .go { transform: rotate(90deg); }
+@media (prefers-reduced-motion: reduce) { .level summary .go { transition: none; } }
+.level .list { padding: 4px 16px 14px; border-top: 1px solid var(--line); }
+.level .list li:first-child { padding-top: 11px; }
+.level > p { padding: 0 16px 16px; }
