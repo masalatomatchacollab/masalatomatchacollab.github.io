@@ -2,7 +2,8 @@
 
 The link-in-bio site for @masalatomatcha, live at **https://masalatomatchacollab.github.io**
 (repo `masalatomatchacollab/masalatomatchacollab.github.io`, GitHub Pages from `main`): `index.html` (links, Follow and the free CV templates in `templates/`) and `jobs.html` (free Japan job
-starter list) and `studybooks.html` (her N5–N2 Japanese book list: links to official publisher pages and free,
+starter list), `companies.html` (23 English-friendly employers in Japan with links to their official career pages; re-check
+the links and update "Last checked" now and then) and `studybooks.html` (her N5–N2 Japanese book list: links to official publisher pages and free,
 openly licensed material only; never host copies of paid textbooks). Plain HTML and CSS, no build step. `avatar.jpg` is the profile photo.
 
 ## Publish changes
